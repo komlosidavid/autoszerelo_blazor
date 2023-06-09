@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\autoszerelo_frontend_mechanic.props" />
+</Project>

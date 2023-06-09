@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Autoszerelo_backend.props" />
+</Project>

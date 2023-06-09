@@ -1,0 +1,288 @@
+﻿@page "/create"
+@using autoszerelo_backend.Requests
+@inject ClientService clientService
+@inject CarService carService
+@inject WorkService workService
+
+<PageTitle>Create work</PageTitle>
+
+<h1>Create work</h1>
+
+<div class="p-3">
+    <form class="d-flex flex-column" style="gap: 1em;">
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+            <label style="width: 100px;">Client name:</label>
+            <input class="form-control w-25 @(isClientNameValid ? "" : "is-invalid")" type="text"
+                @bind-value="clientName" placeholder="John Doe" />
+        </div>
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+            <label style="width: 100px;">Car type:</label>
+            <input class="form-control w-25 @(isCarTypeValid ? "" : "is-invalid")"
+                @bind-value="carType" type="text" placeholder="Audi" />
+        </div>
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+            <label style="width: 100px;">Car licence:</label>
+            <input class="form-control w-25 @(isCarLicenceValid ? "" : "is-invalid")"
+                @bind-value="carLicence" type="text" placeholder="ABC-123" />
+        </div>
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+            <label style="width: 100px;">Built year:</label>
+            <input class="form-control w-25 @(isBuiltYearValid ? "" : "is-invalid")" type="text"
+                @bind-value="builtYear" placeholder="2003" />
+        </div>
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+           <label style="width: 100px;">Work category:</label>
+           <select class="form-select w-25" aria-label="Default select example"
+                @bind="workCategory">
+              <option value="1" selected>Body</option>
+              <option value="2">Engine</option>
+              <option value="3">Landing gear</option>
+              <option value="4">Brake system</option>
+            </select>
+        </div>
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+            <label style="width: 100px;">Problem description:</label>
+            <textarea class="form-control w-25 @(isProblemDescriptionValid ? "" : "is-invalid")" type="text"
+                @bind="problemDescription"></textarea>
+        </div>
+        <div class="form-group d-flex align-items-center" style="gap: 1em;">
+            <label style="width: 100px;">Fault weight:</label>
+            <input class="form-control w-25" type="number"
+                @bind-value="faultWeight" min="1" max="10" />
+        </div>
+        <div class="mt-3 alert alert-success w-100" role="alert" style="display: @(isSuccess ? "block" : "none") ">
+          Work created successfully!
+        </div>
+        <button class="btn btn-primary w-25" @onclick="async () => await CreateWorkData()"
+                    @onclick:preventDefault=true>
+                @(isCreating ? "Creating..." : "Create work")    
+                </button>
+    </form>
+</div>
+
+@code {
+    private string ?clientName;
+    private string ?carType;
+    private string ?carLicence;
+    private string ?builtYear;
+    private string ?problemDescription;
+    private string ?faultWeight;
+    private string ?workCategory;
+    private bool isClientNameValid = true;
+    private bool isCarTypeValid = true;
+    private bool isCarLicenceValid = true;
+    private bool isBuiltYearValid = true;
+    private bool isProblemDescriptionValid = true;
+    private bool canCreate = true;
+    private bool isCreating = false;
+    private bool isSuccess = false;
+}
+
+@functions {
+
+    private async Task CreateWorkData()
+    {
+
+        if (clientName == null)
+        {
+            isClientNameValid = false;
+            canCreate = false;
+        }
+        else if (!ValidateInput(clientName))
+        {
+            isClientNameValid = false;
+            canCreate = false;
+        }
+        else
+        {
+            isClientNameValid = true;
+        }
+
+        if (carType == null)
+        {
+            isCarTypeValid = false;
+            canCreate = false;
+        }
+        else if (!ValidateInput(carType))
+        {
+            isCarTypeValid = false;
+            canCreate = false;
+        }
+        else
+        {
+            isCarTypeValid = true;
+        }
+
+        if (carLicence == null)
+        {
+            isCarLicenceValid = false;
+            canCreate = false;
+        }
+        else if (carLicence.Length != 7 || !ValidateCarLicence(carLicence))
+        {
+            isCarLicenceValid = false;
+            canCreate = false;
+        }
+        else
+        {
+            isCarLicenceValid = true;
+        }
+
+        if (builtYear == null)
+        {
+            isBuiltYearValid = false;
+            canCreate = false;
+        }
+        else if (builtYear.Length != 4 || !ValidateBuiltYear(builtYear))
+        {
+            isBuiltYearValid = false;
+            canCreate = false;
+        }
+        else
+        {
+            isBuiltYearValid = true;
+        }
+
+        if (problemDescription == null)
+        {
+            isProblemDescriptionValid = false;
+            canCreate = false;
+        }
+        else if (!ValidateInput(problemDescription))
+        {
+            isProblemDescriptionValid = false;
+            canCreate = false;
+        }
+        else
+        {
+            isProblemDescriptionValid = true;
+        }
+
+        if (canCreate && clientName != null &&
+            carType != null && carLicence != null &&
+            builtYear != null && problemDescription != null &&
+            faultWeight != null && workCategory != null
+        )
+        {
+
+            isCreating = true;
+            var clientRequest = new CreateClientRequest()
+            {
+                Name = clientName
+            };
+
+            // Create the client
+            var clientResponse = await clientService.CreateClient(clientRequest);
+            clientResponse.EnsureSuccessStatusCode();
+            Client ?client = await clientResponse.Content.ReadFromJsonAsync<Client>();
+
+            // Create the car
+            if (client != null)
+            {
+                var carRequest = new CreateCarRequest()
+                {
+                    BuiltYear = int.Parse(builtYear),
+                    FaultWeight = int.Parse(faultWeight),
+                    Licence = carLicence,
+                    ProblemDescription = problemDescription,
+                    Type = carType,
+                    WorkCategory = (WorkCategory)Enum.Parse(typeof(WorkCategory), workCategory),
+                    OwnerId = client.Id
+                };
+
+                var carResponse = await carService.CreateCar(carRequest);
+                carResponse.EnsureSuccessStatusCode();
+                Car ?car = await carResponse.Content.ReadFromJsonAsync<Car>();
+
+                if (car != null)
+                {
+                    var workRequest = new CreateWorkRequest()
+                    {
+                        CarId = car.Id,
+                        ClientId = client.Id
+                    };
+
+                    var workResponse = await workService.CreateWork(workRequest);
+                    if (workResponse.IsSuccessStatusCode)
+                    {
+                        isCreating = false;
+                        isSuccess = true;
+                    }
+                }
+            }
+        }
+
+    }
+
+    private bool ValidateInput(string input)
+    {
+        string forbiddenCharacters = "Ä€÷×äđĐ[]łŁ$ß¤<>#&@{},.-~ˇ^˘!%/=()`˙´˝";
+        for (var i = 0; i < input.Length; i++)
+        {
+            for (var j = 0; j < forbiddenCharacters.Length; j++)
+            {
+                if (input[i] == forbiddenCharacters[j])
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private bool ValidateCarLicence(string input)
+    {
+        string forbiddenCharacters = "Ä€÷×äđĐ[]łŁ$ß¤<>#&@{},.~ˇ^˘!%/=()`˙´˝";
+        for (var i = 0; i < input.Length; i++)
+        {
+            for (var j = 0; j < forbiddenCharacters.Length; j++)
+            {
+                if (input[i] == forbiddenCharacters[j])
+                {
+                    return false;
+                }
+            }
+        }
+
+        // Check the licence format
+        for (int i = 0; i < 3; i++)
+        {
+            if (!Char.IsLetter(input[i]))
+            {
+                return false;
+            }
+        }
+
+        if (input[3] != '-')
+        {
+            return false;
+        }
+
+        for (int i = 4; i < input.Length; i++)
+        {
+            if (!Char.IsDigit(input[i]))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private bool ValidateBuiltYear(string input)
+    {
+        for (int i = 0; i < input.Length; i++)
+        {
+            if (!Char.IsDigit(input[i]))
+            {
+                return false;
+            }
+        }
+
+        if (int.Parse(input) > DateTime.Now.Year || int.Parse(input) < 1800)
+        {
+            return false;
+        }
+
+        return true;
+    }
+}

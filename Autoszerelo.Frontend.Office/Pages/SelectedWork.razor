@@ -1,0 +1,193 @@
+﻿@page "/work/{id}"
+@inject WorkService service
+@inject CarService carService
+
+<PageTitle>Selected work</PageTitle>
+
+@if (work != null)
+{  
+    <div class="w-100">
+        <h2>Client details:</h2>
+        <div class="d-flex">
+            <form>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input class="form-control" type="text" value="@work.Client.Name" style="width: 300px;" disabled />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="w-100 mt-3">
+        <h2>Car details:</h2>
+        <div class="d-flex">
+            <form class="d-flex" style="gap: 1em;">
+                <div class="form-group">
+                    <label>Type:</label>
+                    <input class="form-control" type="text" value="@work.Car.Type" disabled />
+                </div>
+                <div class="form-group" style="width: 150px;">
+                    <label>Licence:</label>
+                    <input class="form-control" type="text" value="@work.Car.Licence" style="width: 150px;"
+                        @onclick="async() => await GetCars()" />
+                    @if (cars != null)
+                    {
+                        <div class="p-2"
+                            style="width: 150px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; display: @display">
+                            @foreach (var car in cars)
+                            {
+                                <p style="cursor:pointer;" @onclick="async () => await SelectCar(car.Id)">@car.Licence</p>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                       <div class="p-2"
+                            style="width: 150px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; display: @display">
+                            <p>Loading...</p>
+                        </div> 
+                    }
+                </div>
+                <div class="form-group">
+                    <label>Built year:</label>
+                    <input class="form-control" type="text" value="@work.Car.BuiltYear" disabled />
+                </div>
+                <div class="form-group">
+                    <label>Problem description:</label>
+                    <textarea class="form-control" value="@work.Car.ProblemDescription" style="resize:none;" disabled />
+                </div>
+            </form>
+        </div>
+    </div>
+     <div class="w-100 mt-3">
+        <h2>Work details:</h2>
+        <div class="d-flex">
+            <form class="d-flex" style="gap: 1em;">
+                <div class="form-group">
+                    <label>Work hours:</label>
+                    @if (workHours != "")
+                    {
+                        <input class="form-control" type="text" value="@work.WorkHours" disabled />
+                    }
+                    else
+                    {
+                        <input class="form-control" type="text" value="Loading..." disabled />
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="mt-3 alert alert-success w-100" role="alert" style="display: @(isSuccess ? "block" : "none") ">
+      Update was successful!
+    </div>
+    <div class="w-100 p-3">
+        @if (CanUpdate)
+        {
+            <button type="submit" class="btn btn-primary"
+                @onclick="async () => await UpdateWork()" @onclick:preventDefault=true>
+                @(isUpdating ? "Updating..." : "Update work") 
+            </button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary" disabled>Update work</button>   
+        }
+     </div>
+}
+
+@code {
+
+    [Parameter]
+    public string ?id { get; set; }
+    private Work ?work { get; set; }
+    private string display = "none";
+    private bool CanUpdate = false;
+    private string border = "";
+    private IEnumerable<Car> ?cars;
+    private string workHours = "";
+    private bool isSuccess = false;
+    private bool isUpdating = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (id != null)
+        {
+            work = await service.GetWorkById(id);
+            workHours = work.WorkHours.ToString("0.00");
+        }
+    }
+}
+
+@functions {
+
+    private async Task GetCars()
+    {
+        display = "block";
+        if (work != null)
+        {
+            cars = await carService.GetCarsByClientId(work.ClientId);
+        }
+    }
+
+    private async Task SelectCar(Guid id)
+    {
+        display = "none";
+        workHours = "";
+        if (cars != null && work != null)
+        {
+            var selectedCar = cars.FirstOrDefault(c => c.Id == id);
+
+            if (selectedCar != null)
+            {
+                work.Car = selectedCar;
+                float workHours = await service.CalculateWorkHours(selectedCar.Id);
+
+                if (workHours != -1f)
+                {
+                    work.WorkHours = workHours;
+                    this.workHours = workHours.ToString("0.00");
+                }
+            }
+        }
+
+        CanUpdate = true;
+        StateHasChanged();
+    }
+
+    private async Task UpdateWork()
+    {
+        isUpdating = true;
+        if (work != null)
+        {
+            UpdateWorkRequest request = new UpdateWorkRequest()
+            {
+                ClientId = work.ClientId,
+                CarId = work.Car.Id
+            };
+
+            var response = await service.UpdateWork(request, work.Id);
+            if (response.IsSuccessStatusCode)
+            {
+                isSuccess = true;
+                isUpdating = false;
+                CanUpdate = false;
+            }
+        }
+    }
+
+    private bool ValidateInput(string input)
+    {
+        string forbiddenCharacters = "Ä€÷×äđĐ[]łŁ$ß¤<>#&@{},.-~ˇ^˘!%/=()`˙´˝";
+        for (var i = 0; i < input.Length; i++)
+        {
+            for (var j = 0; j < forbiddenCharacters.Length; j++)
+            {
+                if (input[i] == forbiddenCharacters[j])
+                {
+
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
