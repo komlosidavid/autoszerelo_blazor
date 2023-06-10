@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\autoszerelo_frontend_office.props" />
-</Project>

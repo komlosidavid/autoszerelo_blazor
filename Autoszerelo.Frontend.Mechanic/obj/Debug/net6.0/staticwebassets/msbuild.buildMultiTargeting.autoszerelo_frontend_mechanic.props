@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\autoszerelo_frontend_mechanic.props" />
-</Project>
