@@ -403,6 +403,9 @@
           }
         }
       },
+      "StyleCop.Analyzers/1.1.118": {
+        "type": "package"
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -901,6 +904,9 @@
             "related": ".xml"
           }
         }
+      },
+      "StyleCop.Analyzers/1.1.118": {
+        "type": "package"
       },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
@@ -1598,6 +1604,31 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "StyleCop.Analyzers/1.1.118": {
+      "sha512": "Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "type": "package",
+      "path": "stylecop.analyzers/1.1.118",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.dll",
+        "analyzers/dotnet/cs/de-DE/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/en-GB/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es-MX/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr-FR/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl-PL/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
+        "stylecop.analyzers.1.1.118.nupkg.sha512",
+        "stylecop.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "type": "package",
@@ -1758,7 +1789,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.15",
-      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.15"
+      "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.15",
+      "StyleCop.Analyzers >= 1.1.118"
     ]
   },
   "packageFolders": {
@@ -1767,11 +1799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\c#\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
+      "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
       "projectName": "Autoszerelo.Client.Office",
-      "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\c#\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
+      "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
       "packagesPath": "C:\\Users\\komlosi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\c#\\Autoszerelo.Client.Office\\obj\\",
+      "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\komlosi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1808,6 +1840,12 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.15, )"
+          },
+          "StyleCop.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.1.118, )"
           }
         },
         "imports": [
@@ -1832,7 +1870,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

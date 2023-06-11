@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EYy5et/Ajfj+TPAOR+TIBhY3IpeqmKKJoBKydXr7AlAU+Ssq3binRmGq6MRxEOxeWpIhB+GDFt05Myh/pPFqUA==",
+  "dgSpecHash": "uI9wHzeYPapJKpsX93lf6wTQk79+EyUerSdWKK2EEK6/saYFSQE+YMwgayXZ9+cqL8disADDcOdtpOOOh8nmjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\c#\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
+  "projectFilePath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\komlosi\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.15\\microsoft.aspnetcore.authorization.6.0.15.nupkg.sha512",
     "C:\\Users\\komlosi\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.15\\microsoft.aspnetcore.components.6.0.15.nupkg.sha512",
@@ -28,6 +28,7 @@
     "C:\\Users\\komlosi\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\komlosi\\.nuget\\packages\\microsoft.jsinterop\\6.0.15\\microsoft.jsinterop.6.0.15.nupkg.sha512",
     "C:\\Users\\komlosi\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.15\\microsoft.jsinterop.webassembly.6.0.15.nupkg.sha512",
+    "C:\\Users\\komlosi\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
     "C:\\Users\\komlosi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\komlosi\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\komlosi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
