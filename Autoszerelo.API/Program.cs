@@ -1,5 +1,6 @@
 using Autoszerelo.API.Data;
 using Autoszerelo.API.Repoitories;
+using Autoszerelo.API.Repositories;
 using Autoszerelo.API.Repositories.Impl;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ builder.Services.AddDbContextPool<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CarRepairSystem")));
 
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IWorkRepository, WorkRepository>();
 
 var app = builder.Build();
 

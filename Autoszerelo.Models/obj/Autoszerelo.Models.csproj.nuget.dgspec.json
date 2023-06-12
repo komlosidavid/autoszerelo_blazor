@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {}
+    "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {
+    "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
+        "projectUniqueName": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
         "projectName": "Autoszerelo.Models",
-        "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
-        "packagesPath": "C:\\Users\\komlosi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\obj\\",
+        "projectPath": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
+        "packagesPath": "C:\\Users\\Adrián\\.nuget\\packages\\",
+        "outputPath": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\komlosi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adrián\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
