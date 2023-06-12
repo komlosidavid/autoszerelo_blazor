@@ -18,7 +18,7 @@ builder.Services.AddDbContextPool<AppDbContext>(options =>
 
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IWorkRepository, WorkRepository>();
-
+builder.Services.AddScoped<ICarRepository, CarRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

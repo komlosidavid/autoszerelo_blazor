@@ -40,19 +40,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adrián\\.nuget\\packages\\": {}
+    "C:\\Users\\NANDI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
+      "projectUniqueName": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
       "projectName": "Autoszerelo.Models",
-      "projectPath": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
-      "packagesPath": "C:\\Users\\Adrián\\.nuget\\packages\\",
-      "outputPath": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Models\\obj\\",
+      "projectPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
+      "packagesPath": "C:\\Users\\NANDI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Adrián\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NANDI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -101,7 +101,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
