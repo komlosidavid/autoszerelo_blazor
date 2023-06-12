@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj": {}
+    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj": {}
   },
   "projects": {
-    "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj": {
+    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
+        "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
         "projectName": "Autoszerelo.Client.Mechanic",
-        "projectPath": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
-        "packagesPath": "C:\\Users\\Adrián\\.nuget\\packages\\",
-        "outputPath": "C:\\Fonots\\C#\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\obj\\",
+        "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
+        "packagesPath": "C:\\Users\\komlosi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adrián\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\komlosi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.10, 6.0.10]"
+              "version": "[6.0.16, 6.0.16]"
             }
           ],
           "frameworkReferences": {
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
