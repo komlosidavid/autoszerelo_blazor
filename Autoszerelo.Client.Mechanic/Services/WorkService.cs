@@ -14,7 +14,7 @@ namespace Autoszerelo.Client.Mechanic.Services
     public class WorkService
     {
         private readonly HttpClient http;
-        private readonly string url = "https://localhost:7238/api/";
+        private readonly string url = "https://localhost:7176/api/";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkService"/> class.
