@@ -501,6 +501,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Autoszerelo.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Autoszerelo.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Autoszerelo.Models.dll": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
@@ -996,6 +1006,16 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Autoszerelo.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Autoszerelo.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Autoszerelo.Models.dll": {}
         }
       }
     }
@@ -1784,29 +1804,35 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Autoszerelo.Models/1.0.0": {
+      "type": "project",
+      "path": "../Autoszerelo.Models/Autoszerelo.Models.csproj",
+      "msbuildProject": "../Autoszerelo.Models/Autoszerelo.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Autoszerelo.Models >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.15",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.15",
       "StyleCop.Analyzers >= 1.1.118"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NANDI\\.nuget\\packages\\": {}
+    "C:\\Users\\komlosi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
+      "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
       "projectName": "Autoszerelo.Client.Mechanic",
-      "projectPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
-      "packagesPath": "C:\\Users\\NANDI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\obj\\",
+      "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\Autoszerelo.Client.Mechanic.csproj",
+      "packagesPath": "C:\\Users\\komlosi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Mechanic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\NANDI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\komlosi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1819,7 +1845,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {
+              "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1862,7 +1892,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.15, 6.0.15]"
+            "version": "[6.0.16, 6.0.16]"
           }
         ],
         "frameworkReferences": {
@@ -1870,7 +1900,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

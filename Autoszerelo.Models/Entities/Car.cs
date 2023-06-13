@@ -1,6 +1,7 @@
 ﻿namespace Autoszerelo.Models.Entities
 {
     using System.ComponentModel.DataAnnotations;
+    using System.Diagnostics.CodeAnalysis;
 
     public class Car
     {

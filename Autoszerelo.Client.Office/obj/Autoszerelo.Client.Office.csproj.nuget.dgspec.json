@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj": {}
+    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj": {
+    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
+        "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
         "projectName": "Autoszerelo.Client.Office",
-        "projectPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
-        "packagesPath": "C:\\Users\\NANDI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Client.Office\\obj\\",
+        "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\Autoszerelo.Client.Office.csproj",
+        "packagesPath": "C:\\Users\\komlosi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Client.Office\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\NANDI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\komlosi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.15, 6.0.15]"
+              "version": "[6.0.16, 6.0.16]"
             }
           ],
           "frameworkReferences": {
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
