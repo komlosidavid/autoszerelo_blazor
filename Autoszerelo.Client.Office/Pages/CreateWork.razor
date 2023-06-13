@@ -1,5 +1,5 @@
 ﻿@page "/create"
-@using autoszerelo_backend.Requests
+@using Autoszerelo.Models.Requests
 @inject ClientService clientService
 @inject CarService carService
 @inject WorkService workService
@@ -67,7 +67,7 @@
     private string ?builtYear;
     private string ?problemDescription;
     private string ?faultWeight;
-    private string ?workCategory;
+    private string workCategory = WorkCategory.BODY.ToString();
     private bool isClientNameValid = true;
     private bool isCarTypeValid = true;
     private bool isCarLicenceValid = true;
@@ -164,7 +164,7 @@
             faultWeight != null && workCategory != null
         )
         {
-
+            Console.WriteLine("SDas");
             isCreating = true;
             var clientRequest = new CreateClientRequest()
             {
