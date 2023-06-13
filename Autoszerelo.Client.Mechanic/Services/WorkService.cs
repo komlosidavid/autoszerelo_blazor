@@ -4,9 +4,9 @@
 
 namespace Autoszerelo.Client.Mechanic.Services
 {
+    using System.Net.Http.Json;
     using Autoszerelo.Models.Entities;
     using Autoszerelo.Models.Requests;
-    using System.Net.Http.Json;
 
     /// <summary>
     /// Service for working with <see cref="Work"/> entities.
