@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iNNnoBaESrcf7OvZpn2/H3QZz3FH3WFBu2FbgkSwkk2nXDRMY/rFS3AsJlbuzJ5JjsZk+lliDv74TdtwTe8WCg==",
+  "dgSpecHash": "R3MzjA4kRHk9nuuXHPgskpBpbNPT2/q2wZ1jbki8TWU7cwY07aaqw6t1u7hEJzMsXXF43jGxnz8TbD6IFfNoVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\komlosi\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

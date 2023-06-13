@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {}
+    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {
+    "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
+        "projectUniqueName": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
         "projectName": "Autoszerelo.Models",
-        "projectPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
-        "packagesPath": "C:\\Users\\NANDI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NANDI\\Source\\Repos\\autoszerelo_blazor\\Autoszerelo.Models\\obj\\",
+        "projectPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\Autoszerelo.Models.csproj",
+        "packagesPath": "C:\\Users\\komlosi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\komlosi\\OneDrive - adesso Group\\Desktop\\autoszerelo_blazor\\Autoszerelo.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\NANDI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\komlosi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,14 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "StyleCop.Analyzers": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.1.118, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
