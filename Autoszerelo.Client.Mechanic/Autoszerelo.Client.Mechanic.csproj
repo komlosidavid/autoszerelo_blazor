@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Autoszerelo.Models\Autoszerelo.Models.csproj" />
+  </ItemGroup>
+
 </Project>
