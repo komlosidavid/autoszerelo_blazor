@@ -45,7 +45,7 @@ namespace Autoszerelo.API.Repositories.Impl
 
             var car = new Car()
             {
-                Id = default(Guid),
+                Id = default,
                 BuiltYear = request.BuiltYear,
                 FaultWeight = request.FaultWeight,
                 Licence = request.Licence,

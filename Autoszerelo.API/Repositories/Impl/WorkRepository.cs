@@ -46,7 +46,7 @@ namespace Autoszerelo.API.Repositories.Impl
 
             var work = new Work()
             {
-                Id = default(Guid),
+                Id = default,
                 Client = client,
                 Car = car,
                 Status = Status.REGISTERED,

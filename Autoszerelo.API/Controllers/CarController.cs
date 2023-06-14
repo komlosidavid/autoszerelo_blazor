@@ -37,11 +37,11 @@ namespace Autoszerelo.API.Controllers
         {
             try
             {
-                return this.Ok(await repository.GetAllCars());
+                return this.Ok(await this.repository.GetAllCars());
             }
             catch (Exception)
             {
-                return StatusCode(
+                return this.StatusCode(
                     StatusCodes.Status500InternalServerError,
                     "There was a problem with your request");
             }
@@ -58,17 +58,17 @@ namespace Autoszerelo.API.Controllers
         {
             try
             {
-                var car = await repository.GetCarById(id);
+                var car = await this.repository.GetCarById(id);
                 if (car != null)
                 {
                     return this.Ok(car);
                 }
 
-                return NotFound("Car was not found!");
+                return this.NotFound("Car was not found!");
             }
             catch (Exception)
             {
-                return StatusCode(
+                return this.StatusCode(
                     StatusCodes.Status500InternalServerError,
                     "There was a problem with your request");
             }
@@ -84,17 +84,17 @@ namespace Autoszerelo.API.Controllers
         {
             try
             {
-                var car = await repository.CreateCar(request);
+                var car = await this.repository.CreateCar(request);
                 if (car != null)
                 {
                     return this.Ok(car);
                 }
 
-                return NotFound("Client was not found!");
+                return this.NotFound("Client was not found!");
             }
             catch (Exception)
             {
-                return StatusCode(
+                return this.StatusCode(
                     StatusCodes.Status500InternalServerError,
                     "There was a problem with your request");
             }

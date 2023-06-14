@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using Autoszerelo.Models.Entities;
-using Autoszerelo.Models.Requests;
-
 namespace Autoszerelo.API.Repositories
 {
+    using Autoszerelo.Models.Entities;
+    using Autoszerelo.Models.Requests;
+
     /// <summary>
     /// Interface for work repository.
     /// </summary>

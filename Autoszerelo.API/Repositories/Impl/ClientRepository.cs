@@ -58,7 +58,7 @@ namespace Autoszerelo.API.Repositories.Impl
         {
             var client = new Client()
             {
-                Id = default(Guid),
+                Id = default,
                 Name = request.Name,
             };
 
